@@ -735,3 +735,200 @@ textarea { min-height: 130px; resize: vertical; }
     scroll-behavior: auto !important;
   }
 }
+/* =========================================================
+   CASE STUDY LINK
+========================================================= */
+
+.case-study-link{
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(198,161,91,0.4);
+  transition: all 0.3s ease;
+}
+
+.case-study-link:hover{
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.case-study-link::after{
+  content: " ↗";
+  color: var(--accent);
+  font-size: 12px;
+}
+
+/* =========================================================
+   PROCESS EXCELLENCE FRAMEWORK PAGE
+========================================================= */
+
+.framework-page{
+  min-height: 100vh;
+  padding: 128px 7% 80px;
+}
+
+.framework-hero{
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.framework-hero .lead{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.framework-image{
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.framework-image img{
+  width: 100%;
+  display: block;
+}
+
+.framework-content{
+  margin-top: 50px;
+}
+
+.framework-section-title{
+  font-family: var(--serif);
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.phase-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.phase-card{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  transition: all .3s ease;
+}
+
+.phase-card:hover{
+  transform: translateY(-4px);
+  border-color: rgba(198,161,91,.4);
+}
+
+.phase-title{
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.phase-card h3{
+  margin-bottom: 14px;
+  font-family: var(--serif);
+}
+
+.phase-card p{
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.framework-metrics{
+  margin-top: 50px;
+}
+
+.metric-grid{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.metric-card{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+}
+
+.metric-card h2{
+  color: var(--accent);
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.metric-card p{
+  color: var(--muted);
+}
+
+.back-btn{
+  margin-top: 40px;
+}
+
+.case-study-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+  gap: 20px;
+  margin-top: 35px;
+}
+
+.case-study-card{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.case-study-card h3{
+  margin-bottom: 15px;
+  color: var(--accent);
+}
+
+.case-study-card ul{
+  padding-left: 18px;
+}
+
+.case-study-card li{
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 980px){
+
+  .metric-grid{
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .framework-page{
+    padding: 120px 5% 60px;
+  }
+}
+
+@media (max-width: 700px){
+
+  .metric-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .phase-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .case-study-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .framework-section-title{
+    font-size: 24px;
+  }
+}
